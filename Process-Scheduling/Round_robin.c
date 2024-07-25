@@ -62,14 +62,14 @@ void main() {
     }
 
     displayProcessTable(p, n);
-    //displayGanttChart(p, n, quantum); // Function not provided
+    //displayGanttChart(p, n, quantum); 
     printf("Average Turn Around Time: %.2f\n", (float)total_tata / n);
     printf("Average Waiting Time: %.2f\n", (float)total_wt / n);
 
     // Gantt chart logic
     printf("\nGantt Chart:\n");
-    printf("P%d -> ", p[0].pid);
-    for (int i = 0; i < n; i++) {
+    printf("P%d ", p[0].pid);
+    for (int i = 1; i < n; i++) {
         printf("-> P%d ", p[i].pid);
     }
 }
